@@ -5,6 +5,7 @@ export default function Colored({ children }) {
         style: {
             color: 'brown',
             backgroundColor: 'khaki'
-        }
+        },
+        onClick: () => alert("Clicked!")
     })
 }

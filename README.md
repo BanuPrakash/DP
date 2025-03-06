@@ -185,3 +185,106 @@ React.createElement()
 React.cloneElement()
 
 yarn create react-app reactcode
+
+==============
+
+Singleton Pattern
+
+In JavaScript, the monostate pattern is a design approach where all instances of a class share the same state.
+
+```
+class Book {
+  
+}
+
+Book.title = "JS";
+Book.price = 100;
+
+const instance1 = new Book();
+const instance2 = new Book();
+
+instance1.title; // Js
+instance1.price; // 100
+
+instance2.title; // Js
+instance2.price; // 100
+
+instance1.title = "B";
+
+instance1.title; // B
+instance2.title; // B
+
+```
+
+Factory pattern : wholesale creation of object
+Abstract Factory
+```
+class FurnitureFactory {
+    createChair() {
+        return new Chair();
+    }
+
+    createSofa() {
+        return new Sofa(); 
+    }
+}
+```
+
+Structural Pattern: Organizing class / objects 
+* Bridge Pattern
+
+Bridge is a structural design pattern that lets you split a large class or a set of closely related classes into two separate hierarchies.
+
+Resources to be displayed:
+Artist, Album, PlayList
+
+How to Dispay:
+ShortView, LongView
+
+# of Classes getting created
+ShortViewArtist
+ShortViewAlbum
+ShortViewPlayList
+LongViewArtist
+LongViewAlbum
+LongViewPlayList
+
+Want to add ConceptualView, we end up creating 3 more classes
+ConceptualViewArtist
+ConceptualViewAlbum
+ConceptualViewPlaylist
+
+====
+
+```
+class View {
+    constructor(resource) {
+        this.resource = resource;
+    }
+
+    draw() {
+        this.resource.snippet();
+    }
+}
+
+class LongView extends View {
+    constructor(resource) {
+        super(resource)
+    }
+    <!-- draw() {
+        this.resource.snippet();
+    } -->
+}
+class Resource {
+    snippet() {
+        // 
+    }
+}
+
+class Artist extends Resource {
+     snippet() {
+        // return JSx 
+    }
+}
+
+```
