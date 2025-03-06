@@ -29,10 +29,10 @@ NodeJS Latest LTS
 * Creational Patterns
     * Builder
     * React Compound Pattern
-    * Factory
-    * Abstract Factory
     * Prototype
     * Singleton
+    * Factory
+    * Abstract Factory
 * Structural Pattern
     * Bridge
     * Proxy
@@ -158,3 +158,10 @@ Creational design patterns provide various object creation mechanisms, which inc
     <input type="text" {...props}>
     ```
 yarn create react-app react_ts --template typescript
+
+========
+
+Compound Pattern: The compound component pattern allows you to create components that all work together to perform a task.
+Compound components help developers build more expressive and flexible APIs to share state and logic within components. 
+
+The select tag works together with the option tag which is used for a drop-down menu to select items in HTML. Here the <select> manages the state of the UI, then the <option> elements are configured on how the <select> should work.
