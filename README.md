@@ -165,3 +165,18 @@ Compound Pattern: The compound component pattern allows you to create components
 Compound components help developers build more expressive and flexible APIs to share state and logic within components. 
 
 The select tag works together with the option tag which is used for a drop-down menu to select items in HTML. Here the <select> manages the state of the UI, then the <option> elements are configured on how the <select> should work.
+
+Prototype Pattern:
+
+```
+{
+  title: 'React in Action',
+  author: Author { 
+    name: 'Rod Jhonson', 
+    email: 'rod@gmail.com', 
+    typeIndex: 1 
+    },
+  typeIndex: 0
+}
+
+```
