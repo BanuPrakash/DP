@@ -180,3 +180,8 @@ Prototype Pattern:
 }
 
 ```
+
+React.createElement()
+React.cloneElement()
+
+yarn create react-app reactcode
