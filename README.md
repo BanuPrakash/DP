@@ -143,4 +143,18 @@ Creational Design Patterns
 Creational design patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.    
 
 * Builder pattern
-    
+* Builder Pattern in React
+    ``` 
+        App.tsx
+            let elements = new FormBuilder()
+                .input({"label": "Name"})
+                .input({"label": "Email"})
+                .checkbox({"label":"Subscribe for newsletter})
+                .build();
+
+        <div>
+            {elements}
+        </div>
+    <input type="text" {...props}>
+    ```
+yarn create react-app react_ts --template typescript
