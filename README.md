@@ -449,3 +449,43 @@ babelExample> npm i babel-cli babel-loader
 
 Observer Pattern
 Observer is a behavioral design pattern that lets you define a subscription mechanism to notify multiple objects about any events that happen to the object ...
+
+========
+
+
+Chain Of Responsibility : 
+
+request --> Authentication --> Authorization -> logging
+
+class Dispense2000Chain {
+    constructor(nextChain) {
+
+    }
+
+    eject(amount) {
+        // eject 2000 notes
+        this.nextChain.eject(remainingAmount)
+    }
+}
+
+class Dispense500Chain {
+    constructor(nextChain) {
+
+    }
+    eject(amount) {
+        // eject 2000 notes
+        this.nextChain.eject(remainingAmount)
+    }
+}
+
+class Dispense100Chain {
+    constructor(nextChain) {
+
+    }
+}
+
+let dispense100 = new Dispense100Chain()
+let dispense500 = new Dispense500Chain(dispense100)
+let dispense2000 = new Dispense2000Chain(dispense500);
+
+======
