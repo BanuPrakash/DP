@@ -8,7 +8,7 @@ export class BoldCommand {
     }
     getNextStyle() {
         if (this.prevFontWeight === 'bold'
-            || typeof this.prevFontWeight === 'number' && this.prevFontWeight >= 700) {
+            || (typeof this.prevFontWeight === 'number' && this.prevFontWeight >= 700)) {
             return 'normal';
         }
         return 'bold'
