@@ -405,3 +405,40 @@ The Command Design Pattern is a behavioral design pattern that turns a request i
 
 Command Design Pattern for React: Setting font style
 
+====
+
+```
+class BronzeCard {
+    accept(vistor) {
+         visitor.visitBronze(this);
+    }
+}
+
+class SilverCard {
+     accept(vistor) {
+        visitor.visitSilver(this);
+    }
+}
+
+class HotelVistor {
+    visitSilver(silverCard) {
+        give 5% cashback
+    }
+     visitBronze(bronzeCard) {
+        give 1% cashback
+    }
+}
+
+
+class GasVistor {
+    visitSilver(silverCard) {
+        give 2% cashback
+    }
+     visitBronze(bronzeCard) {
+        give 0% cashback
+    }
+}
+```
+
+
+
