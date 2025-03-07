@@ -390,4 +390,16 @@ new Computer("Dell", "XPS", "Intel", "WERT", ...);
  use HOC for eliminating Cross Cutting Concerns
  Cross Cutting Concerns: concerns which are not part of main logic but can be used along with main logic like: loading, security, hovering, ...
 
- 
+ =================
+
+ Behavioral design patterns are a category of design patterns that focus on the interactions and communication between objects.
+* Behavioural 
+    * Command
+    * Visitor
+    * Iterator
+    * Chain Of Responsibility 
+    * Observer
+
+Command Design Pattern:
+The Command Design Pattern is a behavioral design pattern that turns a request into a stand-alone object called a command. It also should support undo operation
+
