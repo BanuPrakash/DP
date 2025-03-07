@@ -4,8 +4,14 @@ import React, { useEffect, useState } from 'react'
 
 function withHover(Element) {
     return props => {
+        let [hovering, setHovering] = useState();
 
-        return <Element  {...props} />
+        return <Element
+            hovering={hovering}
+            {...props}
+            onMouseEnter={() => setHovering(true)}
+            onMouseLeave={() => setHovering(false)}
+        />
     }
 }
 // HOC, decorator
@@ -31,6 +37,9 @@ function withLoading(Element, url) {
 function DogImage(props) {
     return (
         <div>
+            {
+                props.hovering && <div> Hovering </div>
+            }
             <img src={props.data} {...props} />
         </div>
     )
