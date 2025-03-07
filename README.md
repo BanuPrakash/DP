@@ -288,3 +288,85 @@ class Artist extends Resource {
 }
 
 ```
+files: properties / xml files
+class Connection {
+    getConnection() {
+        read config from external resource 
+        and instantiate
+    }
+}
+
+======
+Component Requirement:
+```
+const weatherData = {
+  temperature: 25, // in Celsius
+  humidity: 60,    // in percentage
+  windSpeed: 12,   // in km/h
+};
+```
+API Response:
+```
+{
+  "temp": {
+    "value": 25,
+    "unit": "Celsius"
+  },
+  "humidity": "60%",
+  "wind": {
+    "speed": "12 km/h"
+  }
+}
+```
+
+Adapter:
+```
+// Adapter for API 
+const adaptWeatherDataFromApi = (apiData) => ({
+  temperature: apiData.temp.value,
+  humidity: parseInt(apiData.humidity.replace('%', ''), 10),
+  windSpeed: parseInt(apiData.wind.speed.split(' ')[0], 10),
+});
+```
+
+React Component:
+```
+ const response = await fetch('https://api1.example.com/weather');
+ const data = await response.json();
+ const adaptedData = adaptWeatherDataFromApi(data); // Use the Adapter
+ setWeather(adaptedData);
+```
+===============
+
+Day 2:
+* Structural Pattern
+    * Bridge
+    * Proxy
+    * Decorator Pattern
+    * Flyweight
+    * Adapter
+    * Composite
+    * Facade Pattern
+    
+
+====================
+
+Proxy Structural Pattern:
+    In place of original object
+    logging, validation, caching, lazy loading, ....
+
+Closure:
+```
+    function adder(no) {
+        return function(val)  {
+            return val + no;
+        }
+    }
+
+    let fiveAdder = adder(5);
+```
+
+ES6 Proxy:
+new Proxy(target, handler);
+
+handler is one which contains traps: get, set or/and apply traps
