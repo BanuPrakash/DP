@@ -370,3 +370,24 @@ ES6 Proxy:
 new Proxy(target, handler);
 
 handler is one which contains traps: get, set or/and apply traps
+
+======
+
+The Flyweight Design Pattern is a way to save memory in applications that create a large number of similar objects. Instead of creating a new object for each instance, the Flyweight pattern reuses existing ones wherever possible, sharing common parts between objects.
+
+new Computer("Dell", "XPS", "Intel", "TREW", ...);
+new Computer("Dell", "XPS", "Intel", "POLA", ...);
+new Computer("Dell", "XPS", "Intel", "KIMZ", ...);
+new Computer("Dell", "XPS", "Intel", "LOAA", ...);
+new Computer("Dell", "XPS", "Intel", "WERT", ...);
+
+==========
+
+ Decorator Pattern:
+ Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects
+
+ React HOC follows decorator design pattern
+ use HOC for eliminating Cross Cutting Concerns
+ Cross Cutting Concerns: concerns which are not part of main logic but can be used along with main logic like: loading, security, hovering, ...
+
+ 

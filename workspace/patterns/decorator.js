@@ -66,7 +66,7 @@ console.log(pizza.getDescription() + " Cost :" + pizza.getCost());
 
 
 // decorate it with ExtraCheese topping
-pizza = new ExtraCheese(pizza);
+pizza = new Pepperoni(ExtraCheese(pizza));
 
 //decorate it with paneer topping
 pizza = new Pepperoni(pizza);
