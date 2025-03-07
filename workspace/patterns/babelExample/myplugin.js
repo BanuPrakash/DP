@@ -1,22 +1,22 @@
-module.exports = function (babel) {
-   return {
-      visitor: {
-        Literal(path) {
-          if(path.node.value === 'Hello') {
-            path.node.value = 'Hi';
+module.exports  =   function (babel) { 
+  return {
+    visitor: {
+      Literal: function(path) {
+          if(path.node.value !== "Hello") {
+              return
           }
-          return;
+          path.node.value = "Hi"
       },
-      ImportDeclaration(path) {
-        // var filepath = path.node.source.value; // '@/util';
-        // if(filepath[0] !== '@') {
-        //     return;
-        // }
-        // filepath = filepath.substring(1);
-        // filepath = process.cwd() + "/lib/" + filepath;
+      ImportDeclaration: function(path) {
+          var filepath = path.node.source.value;
+          if(filepath[0] !== "@") {
+              return;
+          }
 
-        // path.node.source.value = filepath;
+          filepath = filepath.substring(1);
+          filepath = process.cwd() + "/lib" + filepath;
+          path.node.source.value = filepath
       }
     }
-    };
-}
+  }
+};
