@@ -12,7 +12,6 @@ module.exports  =   function (babel) {
           if(filepath[0] !== "@") {
               return;
           }
-
           filepath = filepath.substring(1);
           filepath = process.cwd() + "/lib" + filepath;
           path.node.source.value = filepath
