@@ -403,3 +403,5 @@ new Computer("Dell", "XPS", "Intel", "WERT", ...);
 Command Design Pattern:
 The Command Design Pattern is a behavioral design pattern that turns a request into a stand-alone object called a command. It also should support undo operation
 
+Command Design Pattern for React: Setting font style
+
